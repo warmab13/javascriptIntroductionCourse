@@ -15,11 +15,23 @@ console.log(`El area de un triagulo de base ${base} y altura ${height} es:  ${ b
 //Para realizar una funcion hay dos formas utilizando la palabra reservada function, se pueden crear funciones anonimas
 /*function() pero esto no nos permitiria llamarla en donde quisieramos*/
 //Sin embargo se puede realizar con un nombre en especifico
-let base = 5
+/*let base = 5
 let height = 7
 function triangleArea(base, height){
     return base * height / 2
 }
 console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
      ${triangleArea(base, height)}`);
-     //El resultado respeta los espacios del enter en la consola.
+     //El resultado respeta los espacios del enter en la consola.*/
+
+//La siguiente forma de declarar funciones es con una ArrowFunction o una funcion flecha 
+//Nosotros podemos declarar una variable a la cual se le asigna una funcion anonima la cual te permite crear un resultado de la function,
+//asignandole a la misma variable elemento del resultado de la funcion
+//Esta la primera forma de declara la funcion haciendo semblanza al elemento creado
+let base = 5
+let height = 7
+let triangleArea = function (base, height){
+    return base * height / 2
+}
+console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
+     ${triangleArea(base, height)}`);
