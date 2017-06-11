@@ -49,14 +49,22 @@ console.log(`El area de un triagulo de base ${base} y altura ${height} es:
 //SI nosotros sabemos que la function no va a cambiar nunca eso quiere decir que se convierte en una constante, por lo cual,
 /*Es mucho mas simple si declaramos las funciones como constantes en lugar de variables comunes con la 
 palabra let, asi que lo unico que hay que hacer cambiar la palabra reservada let por const*/
-let base = 5
+/*let base = 5
 let height = 7
 const triangleArea =  (base, height) =>  base * height / 2
 
 console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
-     ${triangleArea(base, height)}`);
+     ${triangleArea(base, height)}`);*/
 
 /*Ejericicios
 1.- Escribir la funcion para el area de un circulo,
 2.- Escribir la funcion para el area de rectangulo, como arrow function 
 3.- Escribir la function para el volumen de un cilindro */
+
+let pi = Math.PI
+let radio = 20;
+let radioc = Math.pow(radio, 2)
+
+const circleArea = (radio) => pi * (radioc)
+console.log(`El area de un circulo de radio ${radio} es: 
+     ${circleArea(radio)}`);
