@@ -37,10 +37,26 @@ console.log(`El area de un triagulo de base ${base} y altura ${height} es:
      ${triangleArea(base, height)}`);*/
 
 //Sin embargo nos podemos ahorrar la palabra reservada function para crearla como una funcion flechalet base = 5
+/*let base = 5
+let height = 7
+let triangleArea =  (base, height) =>  base * height / 2
+
+console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
+     ${triangleArea(base, height)}`);*/
+//En este caso no hace falta ni escribir las llaves de cerrado de la funcion ya que solo se retornara una linea de codigo,
+//por lo cual podemos escribirlo de la forma anterior y aunque es una variable se sigue respetando el elemento de la funcion con los parentesis al llamarle.
+
+//SI nosotros sabemos que la function no va a cambiar nunca eso quiere decir que se convierte en una constante, por lo cual,
+/*Es mucho mas simple si declaramos las funciones como constantes en lugar de variables comunes con la 
+palabra let, asi que lo unico que hay que hacer cambiar la palabra reservada let por const*/
 let base = 5
 let height = 7
-let triangleArea =  (base, height) => {
-    return base * height / 2
-}
+const triangleArea =  (base, height) =>  base * height / 2
+
 console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
      ${triangleArea(base, height)}`);
+
+/*Ejericicios
+1.- Escribir la funcion para el area de un circulo,
+2.- Escribir la funcion para el area de rectangulo, como arrow function 
+3.- Escribir la function para el volumen de un cilindro */
