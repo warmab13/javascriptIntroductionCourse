@@ -61,6 +61,7 @@ console.log(`El area de un triagulo de base ${base} y altura ${height} es:
 2.- Escribir la funcion para el area de rectangulo, como arrow function 
 3.- Escribir la function para el volumen de un cilindro */
 
+//1.-
 let pi = Math.PI
 let radio = 20;
 let radioc = Math.pow(radio, 2)
@@ -68,3 +69,11 @@ let radioc = Math.pow(radio, 2)
 const circleArea = (radio) => pi * (radioc)
 console.log(`El area de un circulo de radio ${radio} es: 
      ${circleArea(radio)}`);
+
+//2.-
+let base = 5
+let height = 7
+let rectangleArea =  (base, height) =>  base * height
+
+console.log(`El area de un rectangulo de base ${base} y altura ${height} es: 
+${rectangleArea(base, height)}`);
