@@ -71,9 +71,14 @@ console.log(`El area de un circulo de radio ${radio} es:
      ${circleArea(radio)}`);
 
 //2.-
-let base = 5
-let height = 7
-let rectangleArea =  (base, height) =>  base * height
+let base = 5, height = 7
+const rectangleArea =  (base, height) =>  base * height
 
 console.log(`El area de un rectangulo de base ${base} y altura ${height} es: 
 ${rectangleArea(base, height)}`);
+
+//3.-
+let piCilindro = Math.PI, radioCilindro = 20, radiocCilindro = Math.pow(radioCilindro, 2), heightCilindro = 7
+const cilinderVolume = (pi, radioc, height) => (pi * radioc) * height
+console.log(`El volumen de un cilindro de radio  ${radioCilindro} y altura ${heightCilindro} es: 
+${cilinderVolume(piCilindro, radiocCilindro, heightCilindro)}`);
