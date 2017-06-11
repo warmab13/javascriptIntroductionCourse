@@ -20,13 +20,13 @@ Null Una variable que contiene null no contiene ningún número, cadena, valor b
 No definido undefined Se devuelve el valor undefined cuando se usa una propiedad de objeto que no existe o una variable que se ha declarado, pero nunca ha tenido un valor asignado.*/
 
 const starWars7 = 'StarWars: El despertar de la Fuerza'
-const pgStarWars7 = 13
+let pgStarWars7 = 13
 
 const nameAlonso = 'Alonso'
-const ageAlonso = 26
+let ageAlonso = 26
 
 const nameDante = 'Dante'
-const ageDante = 11
+let ageDante = 11
 /*Si queremos reasignar un valor a cualquiera de estas constantes es un error en JS por lo tanto solamente elementos tipo var o let puede ser reasignados a valores nuevos */
 /*Si queremos que un parametro se evalue desde el inicio lo unico que tenemos que hacer es inicializarlo dentro de la funcion isWithAdult = false*/
 function canWatchStarWars7(name, age, isWithAdult = false){
