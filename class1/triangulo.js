@@ -28,9 +28,18 @@ console.log(`El area de un triagulo de base ${base} y altura ${height} es:
 //Nosotros podemos declarar una variable a la cual se le asigna una funcion anonima la cual te permite crear un resultado de la function,
 //asignandole a la misma variable elemento del resultado de la funcion
 //Esta la primera forma de declara la funcion haciendo semblanza al elemento creado
-let base = 5
+/*let base = 5
 let height = 7
 let triangleArea = function (base, height){
+    return base * height / 2
+}
+console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
+     ${triangleArea(base, height)}`);*/
+
+//Sin embargo nos podemos ahorrar la palabra reservada function para crearla como una funcion flechalet base = 5
+let base = 5
+let height = 7
+let triangleArea =  (base, height) => {
     return base * height / 2
 }
 console.log(`El area de un triagulo de base ${base} y altura ${height} es: 
