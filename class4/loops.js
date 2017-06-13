@@ -17,8 +17,9 @@ function correr(){
     //Esta funcion un regresa un valor entre 0 y 1
     const min = 5
     const max = 15
-    //Math.floor Devuelve el máximo entero menor o igual a un número.
-    return Math.floor(Math.random() * (max-min)) + min
+    //Math.floor Devuelve el máximo entero menor o igual a un número, redondea hacia abajo el valor
+    //Math.round lo redondea para abajo o para arriba dependiendo de que este mas cerca.
+    return Math.round(Math.random() * (max-min)) + min
 
 }
 //El ciclo for esta compuesto de una variable de conteo casi siempre de utiliza i como indice,
@@ -26,8 +27,13 @@ function correr(){
 // y la variable i que funciona como indice es la que va a ir aumentando o disminuyendo
 // cuando se requiera
 let totalKms = 0
-for(let i = 0; i < days.length; i++){
+const l = days.length
+for(let i = 0; i < l; i++){
+    //Una buena practica es no modificar la cantidad de arrays dentro de la repetitiva
     const kms = correr()
     totalKms += kms
     console.log(`El día ${days[i]} ${nombre} corrió ${kms} kms`)
 }
+
+const promedioKms = totalKms / l
+console.log(`En promedio, ${nombre} corrió ${promedioKms.toFixed(2)} kms`)
