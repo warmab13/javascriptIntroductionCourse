@@ -1,6 +1,29 @@
 function pzoom(str){
     let translation = str
 
+    //Si la palabra original es un palindromo,
+    //ninguna regla anterior cuenta y se devuelve 
+    //la misma palabra intercalando mayusculas y minisculas 
+
+    //Los array si cuentan con la propiedad reverse por lo tanto podemos convertir el string en un array 
+    const reverse = (str) => str.split('').reverse().join('') //Esto nos devuelve un arreglo de caracteres del string con comillas, la funcion reverse
+    // nos permite devolver el arreglo de final a inicio y con join juntamos todos los cara teres en una sola palabra
+
+    function minMay(str){
+        const length = str.length
+        let translation = ''
+        let capitalize = true
+        for(let i = 0; i < length; i++){
+            const char = str.charAt(i);
+            translation += capitalize ? char.toUpperCase() : char.toLowerCase()
+            capitalize = !capitalize
+        }
+        return translation
+    }
+    if(str == reverse(str)){
+        return minMay(str); //Solo se ejecuta un return por function 
+    }
+
     //Hacer esto no nos permite modificar el elemento ya que esto es solo un recurso que viene como parametro
     //str.toUpperCase();
 
@@ -42,29 +65,6 @@ function pzoom(str){
         const firstHalf = translation.slice(0,Math.round(l/2)) //Esto es hasta la mitad del string
         const secondHalf = translation.slice(Math.round(l/2)) //Esto es cortar desde la mitad si no se le manda un segundo parametro es hasta el final
         translation = `${firstHalf}-${secondHalf}`
-    }
-
-    //Si la palabra original es un palindromo,
-    //ninguna regla anterior cuenta y se devuelve 
-    //la misma palabra intercalando mayusculas y minisculas 
-
-    //Los array si cuentan con la propiedad reverse por lo tanto podemos convertir el string en un array 
-    const reverse = (str) => str.split('').reverse().join('') //Esto nos devuelve un arreglo de caracteres del string con comillas, la funcion reverse
-    // nos permite devolver el arreglo de final a inicio y con join juntamos todos los cara teres en una sola palabra
-
-    function minMay(str){
-        const length = str.length
-        let translation = ''
-        let capitalize = true
-        for(let i = 0; i < length; i++){
-            const char = str.charAt(i);
-            translation += capitalize ? char.toUpperCase() : char.toLowerCase()
-            capitalize = !capitalize
-        }
-        return translation
-    }
-    if(str == reverse(str)){
-        return minMay(str); //Solo se ejecuta un return por function 
     }
 
     return translation; // por lo tanto si se ejecuta el return anterior este no se ejecuta
