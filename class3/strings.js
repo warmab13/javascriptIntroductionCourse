@@ -29,10 +29,50 @@ function pzoom(str){
         //translation = translation + "pe"
         translation += 'pe'
     }
-    return translation;
+
+    //Si la palabra traducida tiene 10 o más letras, se deb de partir a la mitad y unir con un guion medio.
+    /*Aqui ya se esta utilizando mucho translation.length entonces se crea una const con eso
+    if(translation.length >= 10){
+        const firstHalf = translation.slice(0,Math.round(translation.lenght))
+        const secondHalr = 
+    }*/
+
+    const  l = translation.length
+    if(l >= 10){
+        const firstHalf = translation.slice(0,Math.round(l/2)) //Esto es hasta la mitad del string
+        const secondHalf = translation.slice(Math.round(l/2)) //Esto es cortar desde la mitad si no se le manda un segundo parametro es hasta el final
+        translation = `${firstHalf}-${secondHalf}`
+    }
+
+    //Si la palabra original es un palindromo,
+    //ninguna regla anterior cuenta y se devuelve 
+    //la misma palabra intercalando mayusculas y minisculas 
+
+    //Los array si cuentan con la propiedad reverse por lo tanto podemos convertir el string en un array 
+    const reverse = (str) => str.split('').reverse().join('') //Esto nos devuelve un arreglo de caracteres del string con comillas, la funcion reverse
+    // nos permite devolver el arreglo de final a inicio y con join juntamos todos los cara teres en una sola palabra
+
+    function minMay(str){
+        const length = str.length
+        let translation = ''
+        let capitalize = true
+        for(let i = 0; i < length; i++){
+            const char = str.charAt(i);
+            translation += capitalize ? char.toUpperCase() : char.toLowerCase()
+            capitalize = !capitalize
+        }
+        return translation
+    }
+    if(str == reverse(str)){
+        return minMay(str); //Solo se ejecuta un return por function 
+    }
+
+    return translation; // por lo tanto si se ejecuta el return anterior este no se ejecuta
 }
 
 
 console.log(pzoom("Programar")); //Program
 console.log(pzoom("Zorro")); //Zorrope
 console.log(pzoom("Zarpar")); //Zarppe
+console.log(pzoom("abecedario")); //Zarppe
+console.log(pzoom("sometemos")); //SoMeTeMoS
