@@ -21,7 +21,8 @@ function pzoom(str){
         return translation
     }
     if(str == reverse(str)){
-        return minMay(str); //Solo se ejecuta un return por function 
+        console.log(translation)
+        translation =  minMay(str); //Solo se ejecuta un return por function 
     }
 
     //Hacer esto no nos permite modificar el elemento ya que esto es solo un recurso que viene como parametro
@@ -41,6 +42,7 @@ function pzoom(str){
     }*/
     //Este parametro no esta modificando el string genera un string nuevo y pregunta si terminar con "ar"
     if(str.toLowerCase().endsWith('ar')){
+        console.log(translation)
         //slice nos permite cortar caracteres de una cade
         translation = str.slice(0, -2); //Desde el final sacar dos caracteres y hasta el inicio
     }
@@ -48,6 +50,7 @@ function pzoom(str){
     //Si la palabra inicia con Z, se le añade "pe" al final
     //startsWith nos permite preguntar si una palabra inicia con alguna letra
     if(str.toLowerCase().startsWith('z')){
+        console.log(translation)
         //Esto se puede reescribir con un +=
         //translation = translation + "pe"
         translation += 'pe'
@@ -62,6 +65,7 @@ function pzoom(str){
 
     const  l = translation.length
     if(l >= 10){
+        console.log(translation)
         const firstHalf = translation.slice(0,Math.round(l/2)) //Esto es hasta la mitad del string
         const secondHalf = translation.slice(Math.round(l/2)) //Esto es cortar desde la mitad si no se le manda un segundo parametro es hasta el final
         translation = `${firstHalf}-${secondHalf}`
@@ -76,3 +80,4 @@ console.log(pzoom("Zorro")); //Zorrope
 console.log(pzoom("Zarpar")); //Zarppe
 console.log(pzoom("abecedario")); //Zarppe
 console.log(pzoom("sometemos")); //SoMeTeMoS
+console.log(pzoom("soletatelos"));
