@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-controller="StoreController as s">
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="product in s.products">
             <h3>
-                {{product.name}}
-                <em class="pull-right">{{product.price | currency}}</em>
+                <product-title></product-title>
             </h3>
             <img class="img-thumbnail" ng-src="public/images/{{product.images[0].full}}" alt="">
             <section ng-controller="PanelController as p">
@@ -37,7 +37,7 @@
                         <cite>by: {{review.author}}</cite>
                     </blockquote>
                     <form name="reviewForm" ng-controller="ReviewController as r"
-                        ng-submit="r.addReview(product)">
+                        ng-submit="reviewForm.$valid && r.addReview(product)" novalidate>
                         <blockquote>
                             <b>Star: {{r.review.stars}}</b>
                             {{r.review.body}}
@@ -45,7 +45,7 @@
                         </blockquote>
                         <div class="form-group">
                             <label for="stars">Rate the product</label>
-                            <select ng-model="r.review.stars" id="stars" class="form-control">
+                            <select ng-model="r.review.stars" id="stars" class="form-control" required>
                                 <option value="1">1 Star</option>
                                 <option value="2">2 Stars</option>
                                 <option value="3">3 Stars</option>
@@ -55,14 +55,17 @@
                         </div>
                         <div class="form-group">
                             <label for="body">Rate the product</label>
-                            <textarea ng-model="r.review.body" class="form-control" name="" id="body" cols="10" rows="10" 
-                            placeholder="Write a short review of the product"></textarea>
+                            <textarea ng-model="r.review.body" 
+                            class="form-control" name="" id="body" cols="10" rows="10" 
+                            placeholder="Write a short review of the product" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="author">Email: </label>
-                            <input ng-model="r.review.author" class="form-control" type="email" id="author" placeholder="jhon@example.com" />
+                            <input ng-model="r.review.author" class="form-control" 
+                            type="email" id="author" placeholder="jhon@example.com" required/>
                         </div>
                         <br>
+                        <pre>reviewForm is {{reviewForm.$valid}}</pre>
                         <div class="form-group">
                             <input class="btn btn-primary pull-right"
                          type="submit" value="Submit Review">
