@@ -36,6 +36,40 @@
                         {{review.body}}
                         <cite>by: {{review.author}}</cite>
                     </blockquote>
+                    <form name="reviewForm" ng-controller="ReviewController as r"
+                        ng-submit="r.addReview(product)">
+                        <blockquote>
+                            <b>Star: {{r.review.stars}}</b>
+                            {{r.review.body}}
+                            <cite>by: {{r.review.author}}</cite>
+                        </blockquote>
+                        <div class="form-group">
+                            <label for="stars">Rate the product</label>
+                            <select ng-model="r.review.stars" id="stars" class="form-control">
+                                <option value="1">1 Star</option>
+                                <option value="2">2 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="5">5 Stars</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Rate the product</label>
+                            <textarea ng-model="r.review.body" class="form-control" name="" id="body" cols="10" rows="10" 
+                            placeholder="Write a short review of the product"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Email: </label>
+                            <input ng-model="r.review.author" class="form-control" type="email" id="author" placeholder="jhon@example.com" />
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input class="btn btn-primary pull-right"
+                         type="submit" value="Submit Review">
+                        </div>
+                        
+                        
+                    </form>
                 </div>
             </section>
         </li>
