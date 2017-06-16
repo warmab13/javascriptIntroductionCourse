@@ -1,0 +1,89 @@
+[
+        {
+            "name": "Dodecahedron",
+            "price": 295,
+            "description": "lorem ipsum dolo",
+            "canPurchase": false,
+            "soldOut": true,
+            "images": [
+                "public/images/gem-01.gif",
+                "public/images/gem-02.gif",
+                "public/images/gem-03.gif"
+            ],
+            "reviews": [
+                {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                }
+            ]
+        },
+        {
+            "name": "Prism",
+            "price": 495,
+            "description": "lorem ipsum dolo",
+            "canPurchase": false,
+            "soldOut": true,
+            "images": [
+                "public/images/gem-04.gif",
+                "public/images/gem-05.gif",
+                "public/images/gem-06.gif"
+            ],
+            "reviews": [
+                {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                }
+            ]
+        },
+        {
+            "name": "Azurite",
+            "price": 395,
+            "description": "lorem ipsum dolo",
+            "canPurchase": false,
+            "soldOut": true,
+            "images": [
+                "public/images/gem-07.gif",
+                "public/images/gem-08.gif",
+                "public/images/gem-09.gif"
+            ],
+            "reviews": [
+                {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                },
+                 {
+                    "stars": 5,
+                    "body": "I love this product!!",
+                    "author": "alonsosalcido@gmail.com"
+                }
+            ]
+        }
+    ]
