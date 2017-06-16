@@ -141,4 +141,11 @@
         };
     });
 
+    app.directive('productPanels', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'product-panels.html'
+        }
+    })
+
 })();
